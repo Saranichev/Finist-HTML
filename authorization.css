@@ -1,0 +1,130 @@
+.authorization-container {
+  width: 100%;
+  display: flex;
+  min-height: 100vh;
+}
+.authorization-left-sidebar {
+  width: auto;
+  display: flex;
+  padding: auto;
+  z-index: 999999;
+  align-self: stretch;
+  align-items: center;
+  padding-top: 60px;
+  padding-left: 60px;
+  padding-right: 60px;
+  flex-direction: column;
+  padding-bottom: 60px;
+  justify-content: center;
+  background-color: #f5f7f9;
+}
+.authorization-container1 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.authorization-image {
+  width: 100%;
+  align-self: center;
+  margin-bottom: 90px;
+}
+.authorization-container2 {
+  display: flex;
+  max-width: 460px;
+  align-self: flex-start;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.authorization-text {
+  align-self: flex-start;
+  margin-bottom: 25;
+}
+.authorization-form {
+  width: 100%;
+  height: auto;
+  align-self: flex-start;
+}
+.authorization-container3 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+  justify-content: flex-start;
+}
+.authorization-text1 {
+  font-size: 18px;
+  align-self: center;
+  font-style: normal;
+  font-family: Source Sans Pro;
+  font-weight: 500;
+  margin-left: 10px;
+}
+.authorization-button {
+  color: #ffffff;
+  width: 100%;
+  font-size: 18px;
+  align-self: flex-start;
+  font-style: normal;
+  text-align: center;
+  transition: 0.3s;
+  font-family: Source Sans Pro;
+  font-weight: 400;
+  padding-top: 15px;
+  padding-left: 30px;
+  border-radius: 4px;
+  padding-right: 30px;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+  background-color: #0A50A0;
+}
+.authorization-button:hover {
+  background-color: #0D4789;
+}
+.authorization-text2 {
+  font-size: 14px;
+  align-self: flex-start;
+  font-family: Source Sans Pro;
+}
+.authorization-background-container {
+  width: 100%;
+  background-size: cover;
+  background-image: url('https://catherineasquithgallery.com/uploads/posts/2021-03/1614774630_141-p-odnotonnii-fon-dlya-rabochego-stola-178.jpg');
+}
+@media(max-width: 1600px) {
+  .authorization-container1 {
+    width: auto;
+  }
+}
+@media(max-width: 1200px) {
+  .authorization-container1 {
+    width: auto;
+  }
+}
+@media(max-width: 991px) {
+  .authorization-left-sidebar {
+    width: 100%;
+  }
+  .authorization-container1 {
+    width: auto;
+  }
+  .authorization-container2 {
+    width: 300px;
+    align-self: center;
+  }
+  .authorization-background-container {
+    display: none;
+  }
+}
+@media(max-width: 767px) {
+  .authorization-container2 {
+    width: auto;
+  }
+}
+@media(max-width: 479px) {
+  .authorization-container1 {
+    width: auto;
+  }
+}

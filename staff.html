@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Пользователи</title>
+    <meta property="og:title" content="Пользователи" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Source Sans Pro;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <!-- Подключаем библиотеку jQuery с официального сайта -->
+
+    <!-- Подключаем библиотеку jQuery UI с официального сайта -->
+
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  </head>
+  <body>
+    <div>
+      <link href="./staff.css" rel="stylesheet" />
+
+      <div class="staff-container">
+        <div class="sidebar">
+          <div class="sidebar-top-section">
+            <div class="sidebar-logo-section">
+              <img
+                alt="image"
+                src="public/%D1%80%D0%B5%D1%81%D1%83%D1%80%D1%81%203.svg"
+                loading="eager"
+                class="sidebar-logo"
+              />
+            </div>
+            <nav class="sidebar-menu-1">
+              <a href="index.html" class="menu"><span>Заказы</span></a>
+              <a href="invoices.html" class="menu"><span>Накладные</span></a>
+              <a href="warehouse.html" class="menu"><span>Склад</span></a>
+              <a href="day-week.html" class="sidebar-navlink3 menu">
+                <span>Маршруты</span>
+              </a>
+              <a href="clients.html" class="menu"><span>Клиенты</span></a>
+              <a href="staff.html" class="menu"><span>Сотрудники</span></a>
+              <span class="menu"><span>Отчёты</span></span>
+            </nav>
+            <nav class="sidebar-menu-2">
+              <a href="index.html" class="sidebar-navlink6 menu-no-hover">
+                <span>···</span>
+              </a>
+            </nav>
+            <nav class="sidebar-menu-21">
+              <a href="user-registration.html" class="sidebar-navlink7 menu">
+                <span>Регистрация пользователя</span>
+              </a>
+            </nav>
+          </div>
+          <footer class="sidebar-footer-sidebar">
+            <div class="sidebar-buttons-section">
+              <button type="button" class="sidebar-button">
+                <span class="sidebar-text1">
+                  <span>Выйти из системы</span>
+                  <br />
+                </span>
+              </button>
+            </div>
+          </footer>
+        </div>
+        <section class="main">
+          <header class="box-top">
+            <div class="staff-mobile-logo-section">
+              <img
+                alt="image"
+                src="public/%D1%80%D0%B5%D1%81%D1%83%D1%80%D1%81%203.svg"
+                class="staff-logo"
+              />
+            </div>
+            <div class="staff-box-1">
+              <h1 class="heading-1 headingp-page">Сотрудники</h1>
+              <div class="staff-button">
+                <a href="registration.html" class="staff-button1">
+                  Регистрация
+                </a>
+                <button id="db" type="button" disabled="" class="staff-button2">
+                  Удалить
+                </button>
+              </div>
+            </div>
+          </header>
+          <div class="work">
+            <div class="table">
+              <div class="thg">
+                <div class="tr-h">
+                  <div class="htc">
+                    <input
+                      type="checkbox"
+                      id="sa"
+                      value="all"
+                      class="checkpoint"
+                    />
+                  </div>
+                  <div class="htc">
+                    <span class="thead">Дата регистрации</span>
+                  </div>
+                  <div class="htc"><span class="thead">ФИО</span></div>
+                  <div class="htc"><span class="thead">Должность</span></div>
+                  <div class="htc"><span class="thead">Телефон</span></div>
+                  <div class="htc">
+                    <span class="thead">Электронная почта</span>
+                  </div>
+                </div>
+              </div>
+              <main class="trg">
+                <div class="tr-b">
+                  <div class="tdc">
+                    <input type="checkbox" value="5" class="checkpoint" />
+                  </div>
+                  <div class="tdc">
+                    <a href="ps2.html" class="staff-navlink tdLink link">
+                      10223
+                    </a>
+                  </div>
+                  <div class="tdc">
+                    <span class="td">Сараничев Павел Юрьевич</span>
+                  </div>
+                  <div class="tdc"><span class="td">Дизайнер</span></div>
+                  <div class="tdc">
+                    <span class="td">+7 (910) 106-60-03</span>
+                  </div>
+                  <div class="tdc">
+                    <span class="td">pavelsaranichev@yandex.ru</span>
+                  </div>
+                </div>
+              </main>
+            </div>
+          </div>
+        </section>
+        <div class="staff-mobile-footer">
+          <div class="staff-box-11">
+            <svg viewBox="0 0 1024 1024" class="staff-icon">
+              <path
+                d="M219.429 804.571c0 60.571-49.143 109.714-109.714 109.714s-109.714-49.143-109.714-109.714 49.143-109.714 109.714-109.714 109.714 49.143 109.714 109.714zM219.429 512c0 60.571-49.143 109.714-109.714 109.714s-109.714-49.143-109.714-109.714 49.143-109.714 109.714-109.714 109.714 49.143 109.714 109.714zM1024 749.714v109.714c0 9.714-8.571 18.286-18.286 18.286h-694.857c-9.714 0-18.286-8.571-18.286-18.286v-109.714c0-9.714 8.571-18.286 18.286-18.286h694.857c9.714 0 18.286 8.571 18.286 18.286zM219.429 219.429c0 60.571-49.143 109.714-109.714 109.714s-109.714-49.143-109.714-109.714 49.143-109.714 109.714-109.714 109.714 49.143 109.714 109.714zM1024 457.143v109.714c0 9.714-8.571 18.286-18.286 18.286h-694.857c-9.714 0-18.286-8.571-18.286-18.286v-109.714c0-9.714 8.571-18.286 18.286-18.286h694.857c9.714 0 18.286 8.571 18.286 18.286zM1024 164.571v109.714c0 9.714-8.571 18.286-18.286 18.286h-694.857c-9.714 0-18.286-8.571-18.286-18.286v-109.714c0-9.714 8.571-18.286 18.286-18.286h694.857c9.714 0 18.286 8.571 18.286 18.286z"
+              ></path>
+            </svg>
+            <h1 class="staff-heading1">
+              <span>ЗАЯВКИ</span>
+              <br />
+            </h1>
+          </div>
+          <div class="staff-box-2">
+            <svg viewBox="0 0 1024 1024" class="staff-icon2">
+              <path
+                d="M950.857 932.571v-621.714c0-9.714-8.571-18.286-18.286-18.286h-621.714c-9.714 0-18.286 8.571-18.286 18.286v621.714c0 9.714 8.571 18.286 18.286 18.286h621.714c9.714 0 18.286-8.571 18.286-18.286zM1024 310.857v621.714c0 50.286-41.143 91.429-91.429 91.429h-621.714c-50.286 0-91.429-41.143-91.429-91.429v-621.714c0-50.286 41.143-91.429 91.429-91.429h621.714c50.286 0 91.429 41.143 91.429 91.429zM804.571 91.429v91.429h-73.143v-91.429c0-9.714-8.571-18.286-18.286-18.286h-621.714c-9.714 0-18.286 8.571-18.286 18.286v621.714c0 9.714 8.571 18.286 18.286 18.286h91.429v73.143h-91.429c-50.286 0-91.429-41.143-91.429-91.429v-621.714c0-50.286 41.143-91.429 91.429-91.429h621.714c50.286 0 91.429 41.143 91.429 91.429z"
+              ></path>
+            </svg>
+            <h1 class="staff-heading2">
+              <span>АДМИНКА</span>
+              <br />
+            </h1>
+          </div>
+          <div class="staff-box-3">
+            <svg viewBox="0 0 1024 1024" class="staff-icon4">
+              <path
+                d="M870.286 765.143c-14.857-106.857-58.286-201.714-155.429-214.857-50.286 54.857-122.857 89.714-202.857 89.714s-152.571-34.857-202.857-89.714c-97.143 13.143-140.571 108-155.429 214.857 79.429 112 210.286 185.714 358.286 185.714s278.857-73.714 358.286-185.714zM731.429 365.714c0-121.143-98.286-219.429-219.429-219.429s-219.429 98.286-219.429 219.429 98.286 219.429 219.429 219.429 219.429-98.286 219.429-219.429zM1024 512c0 281.714-228.571 512-512 512-282.857 0-512-229.714-512-512 0-282.857 229.143-512 512-512s512 229.143 512 512z"
+              ></path>
+            </svg>
+            <h1 class="staff-heading3">
+              <span>АККАУНТ</span>
+              <br />
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function() {
+        let selectAllCheckbox = $('#sa');
+        let selectItemCheckboxes = $('.checkpoint');
+        let deleteButton = $('#db');
+
+        selectAllCheckbox.on('change', function(event) {
+          let isChecked = $(event.target).prop('checked');
+          selectItemCheckboxes.prop('checked', isChecked);
+          updateButtonClass();
+        });
+
+        selectItemCheckboxes.on('change', function() {
+          updateButtonClass();
+        });
+
+        deleteButton.on('click', function() {
+          if (!deleteButton.hasClass('inactive')) {
+            const checkedValues = selectItemCheckboxes
+              .filter(':checked')
+              .map(function() {
+                return $(this).val();
+              })
+              .get();
+
+            const xhr = $.ajax({
+              type: 'POST',
+              url: 'https://webhook.site/58b564f3-ac5a-4736-82e8-7aaafc4241d1',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              data: JSON.stringify({ values: checkedValues })
+            });
+
+            xhr.done(function() {
+                console.log('Webhook отправлен успешно!');
+                location.reload();
+              })
+              .fail(function(jqXHR, textStatus, errorThrown) {
+                if (jqXHR.status === 400) {
+                  console.error('Неверный запрос, проверьте данные!');
+                } else if (jqXHR.status === 404) {
+                  console.error('Webhook не найден!');
+                } else if (jqXHR.status === 500) {
+                  console.error('Ошибка сервера!');
+                }
+              });
+          }
+        });
+
+        function updateButtonClass() {
+          const checkedCount = selectItemCheckboxes.filter(':checked').length;
+
+          if (checkedCount > 0) {
+            deleteButton.removeClass('inactive');
+            deleteButton.removeAttr('disabled');
+          } else {
+            deleteButton.addClass('inactive');
+            deleteButton.attr('disabled', '');
+          }
+        }
+      });
+    </script>
+    <script>
+      const rows = document.querySelectorAll('.tr-b');
+      rows.forEach(row => {
+        if (row.hasAttribute('data-href')) {
+          row.addEventListener('dblclick', event => {
+            if (event.target.closest('.checkpoint')) {
+              console.log('Пропускаем элемент checkpoint');
+            } else {
+              window.location.href = row.dataset.href;
+            }
+          });
+        } else {
+          console.log('Ссылка отсутствует');
+        }
+      });
+    </script>
+    <script>
+      $(function() {
+        $('.back').on('click', function() {
+          window.history.back();
+        });
+      });
+    </script>
+  </body>
+</html>
